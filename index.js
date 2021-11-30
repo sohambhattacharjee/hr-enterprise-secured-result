@@ -38,7 +38,7 @@ exports.handler = async (event) => {
       hire_date,
       current_title,
       current_salary } = dbResp[0]
-    if (searchby !== manager_id && searchby !== employee_id) {
+    if (searchby != manager_id && searchby != employee_id) {
       current_salary = "REDACTED"
     }
     responseData = {
